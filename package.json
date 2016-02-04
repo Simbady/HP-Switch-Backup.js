@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Simbady/HP-Switch-Backup.js/issues"
   },
-  "homepage": "https://github.com/Simbady/HP-Switch-Backup.js#readme"
+  "homepage": "https://github.com/Simbady/HP-Switch-Backup.js#readme",
+  "dependencies": {
+    "scp2": "^0.2.2"
+  }
 }
