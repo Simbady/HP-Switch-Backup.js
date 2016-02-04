@@ -1,0 +1,19 @@
+{
+  "name": "hp-switch-config-backup",
+  "version": "1.0.0",
+  "description": "Backup HP switches Startup-config file",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Simbady/HP-Switch-Backup.js.git"
+  },
+  "author": "Jamie Wood",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Simbady/HP-Switch-Backup.js/issues"
+  },
+  "homepage": "https://github.com/Simbady/HP-Switch-Backup.js#readme"
+}
