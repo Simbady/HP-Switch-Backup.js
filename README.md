@@ -1,2 +1,2 @@
 # HP-Switch-Backup.js
-Node JS App to automatically backup HP Startup Config Files.
+Node JS App to backup HP Switch startup config files.
