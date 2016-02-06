@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Simbady/HP-Switch-Backup.js#readme",
   "dependencies": {
+    "nodemailer": "^2.1.0",
     "scp2": "^0.2.2"
   }
 }

@@ -3,12 +3,13 @@
 //Dependancies
 const scp_Client = require('scp2');
 const fs = require('fs');
+const email = require('./email.js');
 
 //Get Switches from File
 const switches = JSON.parse(fs.readFileSync('switches.json', 'utf8'));
 //Initialise Counter
 let Count = 0;
-
+let Results = [];
 //Check if configs folder exists to save to.
 fs.stat('./configs/', function(err, stat) {
   if (err === null) {} else if (err.code == 'ENOENT') {
@@ -42,20 +43,23 @@ function getConfig(Switch) {
     }, './configs/' + Switch.host + '/', function(err) {
       if (err) {
         console.log(Switch.host + err);
-        count();
+        count(Switch.host + err);
+      } else {
+        console.log(Switch.host + " Backed up.");
+        count(Switch.host + " Backed up.");
       }
-      else{
-      console.log(Switch.host + " Backed up.");
-      count();
-    }
     });
   });
 }
 
-function count() {
+function count(result) {
   Count++;
+  Results.push(result);
+  Results.push("<br>");
   if (Count == switches.length) {
-    console.log('Finished');
-    process.exit(0);
-  }
+    email.SendEmail(Results, function(){
+        console.log('Finished');
+        process.exit(0);
+    });
+}
 }
