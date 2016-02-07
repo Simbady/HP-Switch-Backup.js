@@ -39,6 +39,7 @@ function getConfig(Switch) {
       host: Switch.host,
       username: Switch.username,
       password: Switch.password,
+      port: 22,
       path: '/cfg/startup-config'
     }, './configs/' + Switch.host + '/', function(err) {
       if (err) {
@@ -54,12 +55,11 @@ function getConfig(Switch) {
 
 function count(result) {
   Count++;
-  Results.push(result);
-  Results.push("<br>");
+  Results.push(result, "<br>");
   if (Count == switches.length) {
-    email.SendEmail(Results, function(){
-        console.log('Finished');
-        process.exit(0);
+    email.SendEmail(Results, function() {
+      console.log('Finished');
+      process.exit(0);
     });
-}
+  }
 }
