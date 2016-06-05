@@ -1,4 +1,4 @@
-[![Dependency Status](https://david-dm.org/simbady/HP-Switch-Backup.js.svg)](https://david-dm.org/simbady/HP-Switch-Backup.js)
+[![Dependency Status](https://david-dm.org/woodjamie/HP-Switch-Backup.js.svg)](https://david-dm.org/woodjamie/HP-Switch-Backup.js)
 # HP-Switch-Backup.js
 Node.js application to backup HP Procurve Switches through SSH.
 These backups are stored in a folder structure as such
